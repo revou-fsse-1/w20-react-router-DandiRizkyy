@@ -54,8 +54,6 @@ export default function Home({ initialData }: HomeProps) {
       className={`flex flex-col items-centerjustify-center px-6 py-5 ${inter.className}`}
     >
       <Product data={productData} error={error} isLoading={isLoading} />
-
-      <h1 className="bg-red-600">HAI</h1>
     </main>
   );
 }
