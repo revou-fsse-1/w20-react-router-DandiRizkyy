@@ -20,7 +20,7 @@ export default function Navbar() {
                 Logo Here.
               </Link>
               {/* <!-- Nav Links --> */}
-              <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+              <ul className="flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li>
                   <Link className="hover:text-gray-200" href="/">
                     Home
@@ -28,7 +28,7 @@ export default function Navbar() {
                 </li>
               </ul>
               {/* <!-- Header Icons --> */}
-              <div className="hidden xl:flex space-x-5 items-center">
+              <div className="flex space-x-5 items-center">
                 <Link className="hover:text-gray-200" href="/private/wishlist">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export default function Navbar() {
               </div>
             </div>
             {/* <!-- Responsive navbar --> */}
-            <a className="xl:hidden flex mr-6 items-center" href="#">
+            {/* <a className="xl:hidden flex mr-6 items-center" href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6 hover:text-gray-200"
@@ -115,7 +115,7 @@ export default function Navbar() {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-            </a>
+            </a> */}
           </nav>
         </section>
       </div>
