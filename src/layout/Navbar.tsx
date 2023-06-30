@@ -1,9 +1,10 @@
+import LogoutButton from "@/components/LogoutButton";
 import Link from "next/link";
 
 export default function Navbar() {
   return (
     <div>
-      <div className="">
+      <div>
         <section className="relative mx-auto">
           {/* <!-- navbar --> */}
           <nav className="flex justify-between bg-gray-400 text-white w-screen shadow-slate-500 shadow-md">
@@ -75,6 +76,7 @@ export default function Navbar() {
                   {" "}
                   Login{" "}
                 </Link>
+                <LogoutButton />
               </div>
             </div>
             {/* <!-- Responsive navbar --> */}

@@ -1,5 +1,16 @@
+import PrivateLayout from "@/layout/PrivateLayout";
 import React from "react";
 
-export default function Wishlist() {
+export function Wishlist() {
   return <div>wishlist</div>;
 }
+
+const PrivateWishlist = () => {
+  return (
+    <PrivateLayout>
+      <Wishlist />
+    </PrivateLayout>
+  );
+};
+
+export default PrivateWishlist;
