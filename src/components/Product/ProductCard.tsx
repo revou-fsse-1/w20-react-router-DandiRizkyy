@@ -1,6 +1,5 @@
-import useFetchProduct from "@/custom-hooks/useFetchProduct";
 import axios from "axios";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface Product {
   // Define the properties of the Product type
@@ -19,7 +18,40 @@ interface ProductProps {
   isLoading: boolean;
 }
 
+interface CreateWishlist {
+  name: string;
+  userId?: number;
+  productId: number;
+}
+
 export default function Product({ data, error, isLoading }: ProductProps) {
+  const [user, setUser] = useState([]);
+
+  const fetchUserData = async () => {
+    try {
+      const token = window.localStorage.getItem("token"); // Retrieve token when making the API request
+
+      if (!token) {
+        return; // Return early if token is not available
+      }
+
+      const response = await axios.get(
+        "https://w17-our-backend-group-c-production.up.railway.app/auth/profileuser",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+
+      setUser(response.data.userId);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+
   if (error) {
     return <div>Error loading data</div>;
   }
@@ -33,6 +65,30 @@ export default function Product({ data, error, isLoading }: ProductProps) {
       currency: "IDR",
       minimumFractionDigits: 0,
     }).format(data);
+  };
+
+  const handleWishlist = async ({ name, productId }: CreateWishlist) => {
+    try {
+      const token = window.localStorage.getItem("token"); // Retrieve token when making the API request
+
+      if (!token) {
+        return; // Return early if token is not available
+      }
+
+      await axios.post(
+        "https://w17-our-backend-group-c-production.up.railway.app/wishlists",
+        {
+          name: name,
+          userId: user,
+          productId: productId,
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -92,7 +148,12 @@ export default function Product({ data, error, isLoading }: ProductProps) {
                 </svg>
                 Add to cart
               </button>
-              <button className="inline-flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700">
+              <button
+                onClick={() =>
+                  handleWishlist({ name: product.title, productId: product.id })
+                }
+                className="inline-flex items-center justify-center bg-gray-900 px-2 py-1 text-sm text-white transition hover:bg-gray-700"
+              >
                 Add to wishlist
               </button>
             </div>
