@@ -1,6 +1,6 @@
 # Week 20 Assignment NextJs Implementation (ISR/SSG/SSR)
 
-![Assignment](/src/assets/week-19-banner.png)
+![Assignment](/public/w20-images.png)
 
 ## Description ✍🏻
 
