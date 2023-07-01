@@ -1,38 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Week 20 Assignment NextJs Implementation (ISR/SSG/SSR)
 
-## Getting Started
+![Assignment](/src/assets/week-19-banner.png)
 
-First, run the development server:
+## Description ✍🏻
+
+---
+
+For this week's assignment, I am creating a website using Nextjs framework that integrates some functionality such as auth, displaying products to homepages and add products to wishlists as well as delete the products from wishlists.
+
+## Installation 🔨
+
+---
+
+In order to install and develop locally, follow these steps:
+
+1. Clone this repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+$ https://github.com/revou-fsse-1/w20-react-router-DandiRizkyy.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. install required dependencies
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+$ pnpm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. run the project locally
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+$ pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. go to your browser and input localhost:3000 to url path to start developing. :)
 
-## Learn More
+5. if you encounter pnpm version error, delete `pnpm-lock.yaml` and do `pnpm install` again.
 
-To learn more about Next.js, take a look at the following resources:
+## Pages 📖
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Homepages
+2. Wishlist
+3. Cart (Not Yet Implemented)
 
-## Deploy on Vercel
+## Technologies 🚀
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- HTML
+- Tailwindcss
+- Javascript
+- Typescript
+- React
+- Nextjs
+
+## Links 🔗
+
+---
+
+Week 20 Assignment Links : https://w20-react-router-dandi-rizkyy.vercel.app/

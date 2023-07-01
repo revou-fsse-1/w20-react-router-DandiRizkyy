@@ -17,7 +17,7 @@ export default function Navbar() {
                   src=''
                   alt='logo'
                 /> */}
-                Logo Here.
+                Toko-Ku
               </Link>
               {/* <!-- Nav Links --> */}
               <ul className="flex px-4 mx-auto font-semibold font-heading space-x-12">
